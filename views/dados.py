@@ -1,21 +1,24 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import modules.read_database as rdb
 
-def dados(situacao_escolar, nivel_escolarizacao, idade_trabalho, trabalho_cotas, municipios_instituicoes):
 
+def dados():
+    data = rdb.read_database()
     st.markdown("## Dados")
     st.markdown("### Situação Escolar por Faixa Etária")
-    st.dataframe(situacao_escolar)
+    st.dataframe(data["situacao escolar"])
+
 
     st.markdown("### Nível de Escolarização")
-    st.dataframe(nivel_escolarizacao)
+    st.dataframe(data["nivel escolarizacao"])
 
     st.markdown("### Situação Laboral")
-    st.dataframe(idade_trabalho)
+    st.dataframe(data["idade trabalho"])
 
     st.markdown("### Trabalho por Cotas")
-    st.dataframe(trabalho_cotas)
+    st.dataframe(data["trabalho cotas"])
 
     st.markdown("### Municípios com Instituições Cadastradas")
-    st.dataframe(municipios_instituicoes)
+    st.dataframe(data["municipios instituicoes"])

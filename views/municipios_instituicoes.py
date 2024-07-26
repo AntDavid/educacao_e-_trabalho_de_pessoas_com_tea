@@ -1,10 +1,8 @@
 import streamlit as st 
-import pandas as pd
 import matplotlib.pyplot as plt
-import modules.read_database as rdb
 from modules.chart_generator import plot_pie_chart
 
-def municipio_instituicoes():
+def municipios_instituicoes():
     st.markdown(" ### Municípios com Instituições Cadastradas no Rio Grande do Sul \n")
     st.markdown("""
         <div style='text-align: justify;'>
