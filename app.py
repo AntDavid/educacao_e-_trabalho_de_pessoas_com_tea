@@ -2,11 +2,7 @@ import streamlit as st
 
 
 
-# Título
-st.write(" # Educação e Trabalho de Pessoas com TEA")
 
-
-# Conteúdos da barra lateral
 st.sidebar.title("Navegação")
 
 page = st.sidebar.radio("ir para",[
