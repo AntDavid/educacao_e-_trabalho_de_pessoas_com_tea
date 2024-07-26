@@ -8,51 +8,36 @@ st.write(" # Educação e Trabalho de Pessoas com TEA")
 
 # Conteúdos da barra lateral
 st.sidebar.title("Navegação")
-page = st.sidebar.radio("Ir para", ["Equipe", "Introdução", "Situação Escolar", "Nível de Escolarização", "Situação Laboral", "Trabalho por Cotas", "Municípios com Instituições", "Dados", "Conclusão"])
 
-# Páginas
-if (page == "Equipe"):
-    from views.equipe import equipe
-    equipe()
+page = st.sidebar.radio("ir para",[
+    "Equipe",
+    "Introdução",
+    "Situação Escolar",
+    "Nível de Escolarização",
+    "Situação Laboral",
+    "Trabalho por Cotas",
+    "Municípios com Instituições",
+    "Dados",
+    "Conclusão"
+])
 
-
-elif (page == "Introdução"):
-    from views.introducao import introducao
-    introducao()
-
-
-elif (page == "Situação Escolar"):
-    from views.situacao_escolar import situacao_escolar
-    situacao_escolar()
-
-
-elif (page == "Nível de Escolarização"):
-    from views.nivel_escolarizacao import nivel_escolarizacao
-    nivel_escolarizacao()
-
-
-elif (page == "Situação Laboral"):
-    from views.situacao_escolar import situacao_escolar
-    situacao_escolar()    
+pages = {
+    "Equipe": "views.equipe.equipe",
+    "Introdução": "views.introducao.introducao",
+    "Situação Escolar": "views.situacao_escolar.situacao_escolar",
+    "Nível de Escolarização": "views.nivel_escolarizacao.nivel_escolarizacao",
+    "Situação Laboral": "views.situacao_escolar.situacao_escolar",
+    "Trabalho por Cotas": "views.trabalho_cotas.trabalho_cotas",
+    "Municípios com Instituições": "views.municipios_instituicoes.municipios_instituicoes",
+    "Dados": "views.dados.dados",
+    "Conclusão": "views.conclusao.conclusao"
+}
 
 
-elif (page == "Trabalho por Cotas"):
-    from views.trabalho_cotas import trabalho_cotas
-    trabalho_cotas()
+def load_page(page_name):
+    module_path, function_name = pages[page_name].rsplit('.', 1)
+    module = __import__(module_path, globals(), fromlist=[function_name])
+    function = getattr(module, function_name)
+    function()
 
-
-elif (page == "Municípios com Instituições"):
-    from views.trabalho_cotas import trabalho_cotas
-    trabalho_cotas()
-
-
-elif (page == "Dados"):
-    from views.dados import dados
-    dados()
-
-
-elif (page == "Conclusão"):
-    from views.conclusao import conclusao
-    conclusao()
-
-   
+load_page(page)
