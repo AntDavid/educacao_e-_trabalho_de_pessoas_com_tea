@@ -41,7 +41,7 @@ st.write(" # Educação e Trabalho de Pessoas com TEA")
 
 # Conteúdos da barra lateral
 st.sidebar.title("Navegação")
-page = st.sidebar.radio("Ir para", ["Introdução", "Situação Escolar", "Nível de Escolarização", "Situação Laboral", "Trabalho por Cotas", "Municípios com Instituições", "Dados", "Conclusão"])
+page = st.sidebar.radio("Ir para", ["Equipe", "Introdução", "Situação Escolar", "Nível de Escolarização", "Situação Laboral", "Trabalho por Cotas", "Municípios com Instituições", "Dados", "Conclusão"])
 
 # Páginas
 if page == "Equipe":
