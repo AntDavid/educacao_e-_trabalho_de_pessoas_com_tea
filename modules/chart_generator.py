@@ -21,3 +21,4 @@ def plot_pie_chart(labels, sizes, title):
     plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=60, colors=['#66b3ff','#ff9999'])
     plt.title(title)
     st.pyplot(plt)
+    
