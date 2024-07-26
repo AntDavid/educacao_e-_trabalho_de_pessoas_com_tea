@@ -17,7 +17,7 @@ def situacao_laboral():
         </div>
     """, unsafe_allow_html=True)
 
-    data = rdb.read_database(rdb.load_data)
+    data = rdb.read_database()
     plot_bar_chart(data["idade trabalho"], 'Idade', 'Total', 'Situação Laboral por Idade', 'Idade', 'Número de Pessoas')
     plt.subplots_adjust(bottom=0.3)
     st.markdown("""
