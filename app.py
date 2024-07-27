@@ -21,7 +21,7 @@ pages = {
     "Introdução": "views.introducao.introducao",
     "Situação Escolar": "views.situacao_escolar.situacao_escolar",
     "Nível de Escolarização": "views.nivel_escolarizacao.nivel_escolarizacao",
-    "Situação Laboral": "views.situacao_escolar.situacao_escolar",
+    "Situação Laboral": "views.situacao_laboral.situacao_laboral",
     "Trabalho por Cotas": "views.trabalho_cotas.trabalho_cotas",
     "Municípios com Instituições": "views.municipios_instituicoes.municipios_instituicoes",
     "Dados": "views.dados.dados",
