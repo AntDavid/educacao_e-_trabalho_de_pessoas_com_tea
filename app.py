@@ -1,8 +1,7 @@
 import streamlit as st
 
+st.set_page_config(page_title="Educação e Trabalho de Pessoas com TEA", page_icon="🧩", layout="wide")
 
-
-# Conteúdos da barra lateral
 st.sidebar.title("Navegação")
 
 page = st.sidebar.radio("ir para",[

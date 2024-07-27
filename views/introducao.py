@@ -2,6 +2,8 @@ import streamlit as st
 
 
 def introducao():
+    st.markdown(""" # Educação e Trabalho de Pessoas com TEA""")
+
     st.markdown("""
         ## Introdução
         """)
