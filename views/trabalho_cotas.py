@@ -11,7 +11,7 @@ def trabalho_cotas():
         </div>
     """, unsafe_allow_html=True)
     data = rdb.read_database()
-    plot_bar_chart(data["trabalho cotas"], 'Trabalho', 'Total', 'Trabalho por Cotas', 'Trabalho', 'Número de Pessoas')
+    plot_bar_chart(data["trabalho cotas"], 'Trabalho', 'Total', 'Trabalho por Cotas (população acima de 16 anos)', 'Trabalho', 'Número de Pessoas')
     st.markdown("""
         #### Fontes:
         https://www.faders.rs.gov.br/pesquisa-ciptea - Acesso em 19/07/2022\n
