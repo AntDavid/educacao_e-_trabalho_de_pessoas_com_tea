@@ -22,3 +22,7 @@ def dados():
 
     st.markdown("### Municípios com Instituições Cadastradas")
     st.dataframe(data["municipios instituicoes"])
+
+    st.markdown(""" Referências: 
+        https://www.faders.rs.gov.br/pesquisa-ciptea - Acesso em 19/07/2022
+    """)
