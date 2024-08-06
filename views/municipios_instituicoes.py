@@ -40,7 +40,6 @@ def municipios_instituicoes():
         
     plt.figure(figsize=(10, 6))
     plt.bar(categories, values, color='red')
-    plt.xlabel('Categorias')
     plt.ylabel('Crescimento (%)')
     plt.title('Crescimento do Número de Escolas e Alunos no AEE no Ceará (2010-2017)')
     plt.xticks(rotation=45)
