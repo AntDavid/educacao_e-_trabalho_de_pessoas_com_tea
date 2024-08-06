@@ -43,7 +43,7 @@ def municipios_instituicoes():
     plt.xlabel('Categorias')
     plt.ylabel('Crescimento (%)')
     plt.title('Crescimento do Número de Escolas e Alunos no AEE no Ceará (2010-2017)')
-    plt.figtext(0.99, 0.01, 'Fonte: scielo.br', horizontalalignment='right', fontsize=10, color='gray')
+    plt.figtext(0.99, 0.01, 'Fonte: scielo.br', horizontalalignment='right', fontsize=10, color='red')
     plt.xticks(rotation=45)
     st.pyplot(plt)
 
